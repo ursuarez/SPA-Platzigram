@@ -4,7 +4,9 @@
   "description": "Comparte tus fotos estudiando en Platzi con el resto de la comunidad",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp",
+    "start": "gulp | node server.js"
   },
   "keywords": [
     "platzi",
@@ -22,10 +24,12 @@
     "babel-core": "^6.26.0",
     "babelify": "^8.0.0",
     "browserify": "^14.5.0",
+    "empty-element": "^1.0.0",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.9.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
-    "vinyl-source-stream": "^2.0.0"
+    "vinyl-source-stream": "^2.0.0",
+    "yo-yo": "^1.4.1"
   }
 }

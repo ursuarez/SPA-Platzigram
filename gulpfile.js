@@ -32,5 +32,5 @@ gulp.task('scripts', () => {
 })
 
 gulp.task('default', () => {
-    gulp.watch('index.scss', ['styles'])
+    gulp.watch(['index.scss', './src/*.js', './assets/*.*'], ['styles', 'scripts', 'assets'])
 })
