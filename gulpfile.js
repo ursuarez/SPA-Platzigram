@@ -26,11 +26,12 @@ gulp.task('scripts', () => {
     browserify('./src/index.js')
         .transform(babel)
         .bundle()
+        .on('error', err => console.log(err))
         .pipe(source('index.js'))
         .pipe(rename('app.js'))
         .pipe(gulp.dest('public'))
 })
 
 gulp.task('default', () => {
-    gulp.watch(['index.scss', './src/*.js', './assets/*.*'], ['styles', 'scripts', 'assets'])
+    gulp.watch(['index.scss', './src/**/*.js', './assets/*.*'], ['styles', 'scripts', 'assets'])
 })
